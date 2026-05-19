@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 
 require('./src/config/db');
-const PORT = process.env.PORT | 7000;
+const PORT = process.env.PORT || 7000;
 const authroutes = require('./src/routes/authroutes');
 app.use(express.json());
 app.use('/api/v1', authroutes);
